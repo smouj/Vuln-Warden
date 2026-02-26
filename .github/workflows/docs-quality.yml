@@ -1,0 +1,17 @@
+name: docs-quality
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  markdown-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: davidanson/markdownlint-cli2-action@v19
+        with:
+          globs: |
+            **/*.md
