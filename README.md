@@ -1,61 +1,68 @@
 # Vuln Warden
 
-## Qué es
+[![Language: English](https://img.shields.io/badge/Language-English-blue.svg)](README.md)
+[![Idioma: Español](https://img.shields.io/badge/Idioma-Espa%C3%B1ol-green.svg)](README.es.md)
 
-**Vuln Warden** es una skill especializada en **security-maintenance** para ecosistemas multiagente (OpenClaw/KiloCode), diseñada para ejecutar tareas con seguridad, trazabilidad y resultados reproducibles.
+Specialized skill for **security-maintenance** operations in multi-agent environments (OpenClaw/KiloCode).
 
-## Cuándo usarla
+## Overview
 
-- Cuando la tarea pertenece al dominio de **security-maintenance**.
-- Cuando necesitas flujo estructurado: análisis → plan → ejecución → validación.
-- Cuando necesitas reporte profesional con verificación y rollback.
+Vuln Warden helps execute security-maintenance tasks with a secure, repeatable, and audit-friendly workflow.
 
-## Qué hace
+## When to use
 
-- Define triggers claros de activación.
-- Ejecuta proceso operativo obligatorio en 4 pasos.
-- Aplica reglas de seguridad y guardrails.
-- Entrega salida estandarizada para auditoría y operación.
+- You need structured execution in the **security-maintenance** domain.
+- You want reproducible outputs (plan, verification, rollback).
+- You need explicit safety guardrails and operator control.
 
-## Inputs esperados
+## Core capabilities
 
-- Objetivo técnico.
-- Alcance y restricciones.
-- Entorno objetivo (repo, VPS, servicio, etc.).
-- Riesgo/tolerancia esperada.
+- Trigger-based activation for security-maintenance scenarios.
+- 4-step workflow (analysis, planning, execution, validation).
+- Standardized output format for operations and reporting.
+- Security-first guardrails.
 
-## Outputs esperados
+## Inputs
 
-- Plan breve y accionable.
-- Cambios realizados (si aplica).
-- Verificación reproducible.
-- Rollback y riesgo residual.
+- Goal and scope
+- Environment/context (repo, VPS, service, etc.)
+- Constraints and risk tolerance
 
-## Límites y seguridad
+## Outputs
 
-- No exponer secretos.
-- No ejecutar acciones destructivas sin confirmación explícita.
-- Evitar cambios no trazables o no verificables.
+- Operational summary
+- Applied plan
+- Changes made
+- Verification evidence
+- Rollback steps
+- Residual risk
+
+## Files
+
+- `SKILL.md` → English skill spec
+- `SKILL.es.md` → Spanish skill spec
+- `README.md` → English documentation
+- `README.es.md` → Spanish documentation
+
+## Limits and guardrails
+
+- Never expose secrets.
+- Never perform destructive actions without explicit confirmation.
+- Prefer minimal, reversible changes.
 
 ## Troubleshooting
 
-1. Verificar credenciales/herramientas disponibles.
-2. Validar acceso al entorno objetivo.
-3. Reducir alcance a cambio mínimo seguro.
-4. Reintentar con evidencia y logs.
+1. Verify tool/auth access.
+2. Re-check environment reachability.
+3. Reduce to minimal safe scope.
+4. Re-run with explicit verification commands.
 
-## Ejemplo rápido
+## Quick example
 
-**Input:** “Necesito revisar y endurecer el flujo de security-maintenance”.
+**Input:** "Audit and improve security-maintenance workflow."
 
-**Output esperado:**
-- Diagnóstico inicial
-- Plan en pasos
-- Implementación incremental
-- Validación + rollback
-
-## Archivos de la skill
-
-- `SKILL.md` (EN)
-- `SKILL.es.md` (ES)
-- `README.md` (este documento)
+**Expected output:**
+- Scope + plan
+- Safe execution steps
+- Verification commands
+- Rollback procedure

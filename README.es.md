@@ -1,22 +1,68 @@
 # Vuln Warden
 
-Skill para triaje de vulnerabilidades en dependencias y planificación de parches en repositorios local-first.
+[![Language: English](https://img.shields.io/badge/Language-English-blue.svg)](README.md)
+[![Idioma: Español](https://img.shields.io/badge/Idioma-Espa%C3%B1ol-green.svg)](README.es.md)
 
-## Qué hace
-- Construye inventario rápido de dependencias (directas/transitivas cuando aplica).
-- Clasifica CVEs por explotabilidad, exposición en runtime e impacto de negocio.
-- Genera plan de remediación priorizado con pasos y rollback.
-- Aplica guardrails para cambios seguros en producción.
+Skill especializada para operaciones de **security-maintenance** en entornos multiagente (OpenClaw/KiloCode).
 
-## Archivos incluidos
-- `SKILL.md` — especificación canónica en inglés.
-- `SKILL.es.md` — especificación en español.
-- `ARCHITECTURE.md` — arquitectura de entendimiento y decisión.
-- `USE_CASES.md` — escenarios reales.
-- `LIMITS.md` — límites, no-objetivos y restricciones legales/seguridad.
+## Descripción general
 
-## Uso rápido
-Activa esta skill cuando necesites priorizar CVEs, definir parches seguros o preparar rollout de updates de dependencias.
+Vuln Warden permite ejecutar tareas de security-maintenance con un flujo seguro, reproducible y trazable.
 
-## Versión
-Release inicial: `v0.1.0`.
+## Cuándo usar
+
+- Necesitas ejecución estructurada en el dominio **security-maintenance**.
+- Quieres resultados reproducibles (plan, verificación y rollback).
+- Necesitas guardrails explícitos de seguridad y control del operador.
+
+## Capacidades principales
+
+- Activación por triggers para escenarios de security-maintenance.
+- Flujo de 4 pasos (análisis, planificación, ejecución, validación).
+- Formato de salida estandarizado para operación y reporte.
+- Guardrails security-first.
+
+## Entradas
+
+- Objetivo y alcance
+- Entorno/contexto (repo, VPS, servicio, etc.)
+- Restricciones y tolerancia al riesgo
+
+## Salidas
+
+- Resumen operativo
+- Plan aplicado
+- Cambios realizados
+- Evidencia de verificación
+- Pasos de rollback
+- Riesgo residual
+
+## Archivos
+
+- `SKILL.md` → Especificación en inglés
+- `SKILL.es.md` → Especificación en español
+- `README.md` → Documentación en inglés
+- `README.es.md` → Documentación en español
+
+## Límites y guardrails
+
+- Nunca exponer secretos.
+- Nunca ejecutar acciones destructivas sin confirmación explícita.
+- Preferir cambios mínimos y reversibles.
+
+## Troubleshooting
+
+1. Verificar acceso a herramientas/autenticación.
+2. Revalidar alcance y conectividad del entorno.
+3. Reducir a cambio mínimo seguro.
+4. Reintentar con comandos de verificación explícitos.
+
+## Ejemplo rápido
+
+**Input:** "Audita y mejora el flujo de security-maintenance."
+
+**Salida esperada:**
+- Alcance + plan
+- Ejecución segura
+- Comandos de verificación
+- Procedimiento de rollback
